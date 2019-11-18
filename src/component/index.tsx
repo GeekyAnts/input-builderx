@@ -41,7 +41,9 @@ class InputX extends React.Component<
       if (this.props.outputProcessor) {
         newEv['target']['value'] = this.props.outputProcessor(e);
       }
-      this.props.onChange(newEv);
+      if (this.props.onChange) {
+        this.props.onChange(newEv);
+      }
     }
     this.setState({ value });
   };
