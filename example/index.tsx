@@ -1,9 +1,10 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import InputX from '../.';
+import InputX from '../src';
 
 export default class App extends React.Component<{}, { val: any }> {
+  // inputRef: any;
   constructor(props: any) {
     super(props);
     this.state = { val: 76 };
