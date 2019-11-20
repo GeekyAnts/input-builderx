@@ -3,8 +3,8 @@ import PropType from './../types';
 
 type StateType = { value: any; hasFocus: boolean };
 
-class InputX extends React.Component<
-  PropType & React.HTMLProps<HTMLInputElement>,
+export default class InputX extends React.Component<
+  PropType & React.HTMLProps<HTMLInputElement> & { innerRef?: any },
   StateType
 > {
   constructor(props: PropType) {
@@ -72,9 +72,9 @@ class InputX extends React.Component<
   }
 }
 
-export default React.forwardRef(
-  (props: PropType & React.HTMLProps<HTMLInputElement>, ref) => (
-    // @ts-ignore
-    <InputX innerRef={ref} {...props} />
-  )
-);
+// export default React.forwardRef(
+//   (props: PropType & React.HTMLProps<HTMLInputElement>, ref) => (
+//     // @ts-ignore
+//     <InputX innerRef={ref} {...props} />
+//   )
+// );

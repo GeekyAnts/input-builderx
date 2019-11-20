@@ -4,11 +4,14 @@ import * as ReactDOM from 'react-dom';
 import InputX from '../src';
 
 export default class App extends React.Component<{}, { val: any }> {
-  // inputRef: any;
+  inputRef: any;
   constructor(props: any) {
     super(props);
     this.state = { val: 76 };
   }
+  // componentDidMount() {
+  //   console.log('ref', this.inputRef);
+  // }
   render() {
     return (
       <div>
@@ -23,6 +26,7 @@ export default class App extends React.Component<{}, { val: any }> {
         <br />
         Validator Input (Native API):{' '}
         <InputX
+          ref={e => (this.inputRef = e)}
           value={this.state.val}
           onChange={(e: any) => this.setState({ val: e.target.value })}
         />

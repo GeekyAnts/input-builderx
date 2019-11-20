@@ -4,7 +4,6 @@ type PropType = {
   validator?: (e: any) => void;
   inputProcessor?: (e: any) => void;
   outputProcessor?: (e: any) => void;
-  innerRef?: any;
 };
 
 export default PropType;
