@@ -36,11 +36,11 @@ import { InputX } from 'input-builderx';
 
 ## API
 
-| Event           | Description                                                                                                            |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| validator       | `function`.Optional. Checks the validity of the user input. If it returns true then the `onChange` function is called. |
-| inputProcessor  | `function`.Optional. Processor function for the `value` prop.                                                          |
-| outputProcessor | `function`. Optional. Processor function for the user input values.                                                    |
+| Event           | Description                                                                                                             |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| validator       | `function`. Optional. Checks the validity of the user input. If it returns true then the `onChange` function is called. |
+| inputProcessor  | `function`. Optional. Processor function for the `value` prop.                                                          |
+| outputProcessor | `function`. Optional. Processor function for the user input values that will be passed to `onChange` after processing.  |
 
 ## License
 

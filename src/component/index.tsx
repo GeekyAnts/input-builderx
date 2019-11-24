@@ -69,7 +69,6 @@ class InputX extends React.Component<
 
 export default React.forwardRef(
   (props: PropType & React.HTMLProps<HTMLInputElement>, ref) => (
-    // @ts-ignore
-    <InputX innerRef={ref} {...props} />
+    <InputX innerRef={ref} {...props} ref={null} />
   )
 );
