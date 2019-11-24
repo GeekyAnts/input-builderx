@@ -1,9 +1,9 @@
 import * as React from 'react';
-import PropType from './../types';
+import { PropType } from './../types';
 
 type StateType = { value: any; hasFocus: boolean };
 
-export default class InputX extends React.Component<
+class InputX extends React.Component<
   PropType & React.HTMLProps<HTMLInputElement> & { innerRef?: any },
   StateType
 > {
@@ -28,12 +28,7 @@ export default class InputX extends React.Component<
   }
   onChange = (e: any) => {
     let value: any = e.target.value;
-    if (this.props.validator) {
-      this.props.validator(e);
-    }
-    if (value === null || value === undefined || value === '') {
-      value = undefined;
-    } else if (
+    if (
       (this.props.validator && this.props.validator(e)) ||
       !this.props.validator
     ) {
@@ -72,9 +67,9 @@ export default class InputX extends React.Component<
   }
 }
 
-// export default React.forwardRef(
-//   (props: PropType & React.HTMLProps<HTMLInputElement>, ref) => (
-//     // @ts-ignore
-//     <InputX innerRef={ref} {...props} />
-//   )
-// );
+export default React.forwardRef(
+  (props: PropType & React.HTMLProps<HTMLInputElement>, ref) => (
+    // @ts-ignore
+    <InputX innerRef={ref} {...props} />
+  )
+);

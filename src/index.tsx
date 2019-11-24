@@ -1,4 +1,4 @@
 // import InputX from './component';
-export { default } from './component';
+export { default as InputX } from './component';
 
-export { default as InputProps } from './types';
+export { PropType as InputProps } from './types';

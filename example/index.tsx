@@ -1,7 +1,7 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import InputX from '../src';
+import { InputX } from '../src';
 
 export default class App extends React.Component<{}, { val: any }> {
   inputRef: any;
