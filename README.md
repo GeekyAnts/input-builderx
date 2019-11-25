@@ -16,6 +16,10 @@ _or_
 npm install input-builderx --save
 ```
 
+## Demo
+
+Try the demo [here](https://codesandbox.io/s/inputx-demo-x0lwk)
+
 ## Usage
 
 Import the React component

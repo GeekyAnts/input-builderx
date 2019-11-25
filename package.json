@@ -1,6 +1,6 @@
 {
     "name": "input-builderx",
-    "version": "0.1.8",
+    "version": "1.0.0",
     "license": "MIT",
     "author": "Ankur Kedia",
     "main": "dist/index.js",
