@@ -59,8 +59,18 @@ class InputX extends React.Component<
         ref={innerRef}
         type={this.props.type || 'text'}
         value={this.state.value}
-        onFocus={() => this.setState({ hasFocus: true })}
-        onBlur={() => this.setState({ hasFocus: false })}
+        onFocus={(e: any) => {
+          if (this.props.onFocus) {
+            this.props.onFocus(e);
+          }
+          this.setState({ hasFocus: true });
+        }}
+        onBlur={(e: any) => {
+          if (this.props.onBlur) {
+            this.props.onBlur(e);
+          }
+          this.setState({ hasFocus: false });
+        }}
         onChange={(e: any) => this.onChange(e)}
       />
     );
